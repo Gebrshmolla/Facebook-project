@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Tages() {
+function Sing_Up() {
   return (
     <div>
-      
+      Sing_Up
     </div>
   )
 }
 
-export default Tages
+export default Sing_Up

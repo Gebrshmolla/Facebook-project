@@ -1,12 +1,10 @@
-import MyForm from './pages/Formic';
-import { BrowserRouter as Router,Routes,Route,link } from 'react-router-dom';
-import Login from './pages/LoginPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Routers from './Router/Router';
 function App() {
   return (
    
     <div className="App">
-     <Login/>
-     {/* <MyForm/> */}
+     <Routers/>
     </div>
    
   );

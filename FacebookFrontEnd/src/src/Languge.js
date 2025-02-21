@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../Components/Ui/button";
-import Ul from "../Components/Ui/Ul";
+import { FiPlus } from "react-icons/fi";
+import { Link } from "react-router-dom";
 export function Languages(){
     const languages = [
         'English (US)',
@@ -13,9 +13,7 @@ export function Languages(){
         'Deutsch',
         'Italiano',
         'हिन्दी',
-        '中文(简体)',<Button text={'+'} className={"add"}/>
+        '中文(简体)',<Link><FiPlus className="fs-2 bounded"/></Link>
       ];
-    return (
-        <Ul li={languages}/>
-    );
+    return languages;
 }
