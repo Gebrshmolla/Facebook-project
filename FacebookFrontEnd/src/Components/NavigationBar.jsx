@@ -126,7 +126,6 @@ const handleAccount=()=>{
   setManu(false)
   setMessanger(false)
   setBell(false)
-  
   setAccount(true)
 }
   return (
