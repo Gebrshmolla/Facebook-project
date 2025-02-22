@@ -1,9 +1,8 @@
 import React from 'react';
 import Image from '../Components/Ui/Image';
-import Input from '../Components/Ui/Input';
 import Button from '../Components/Ui/button';
 import { Link } from 'react-router-dom';
-import {useFormik} from 'formik'
+import {ErrorMessage, Field, Form, Formik} from 'formik'
 import * as yup from 'yup'
 import Bottom from '../Components/Bottom';
 const initialValues={
@@ -19,44 +18,40 @@ const validationSchema=yup.object({
 })
 export default  function Login()
 {
-    const formik=useFormik({
-    initialValues,
-    onSubmit,
-    validationSchema
-    // validate
-    })
-    
     return(
         <div className=' bg-light'>
-            <div className='d-flex  bg-light p-5'>
-                <div className=' mt-5'>
+     
+            <div className='d-md-flex  border-bottom d-sm-block bg-light p-5'>
+                <div className=' mt-5' style={{minWidth:"400px",}}>
                  <Image src="https://z-p3-static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg"
                   alt="Facebook"
-                 className={"w-100 h-50"}/>
+                 className={"w-100 "}/>
                 </div>
-                <div className='bg-dark w-50 rounded mx-4  p-2 mt-5' style={{maxWidth:"500px"}}>
-                <form onSubmit={formik.handleSubmit}>
+                <div className='bg-white  rounded mx-4  p-2 mt-5' style={{maxWidth:"450px",minWidth:"450px"}}>
+                <Formik
+                initialValues={initialValues}
+                onSubmit={onSubmit}
+                validationSchema={validationSchema}>
+                <Form>
                   <div className='d-flex justify-content-center align-item-center fs-5 fw-light my-3 mx-5'>
                   LogIn Facebook
                    </div>
               
                 <div className='my-2 '>
-                <Input className={'form-control  p-3 fs-6'}
+                <Field className={'form-control  p-3 fs-6'}
                     placeholder={'Email or phone number'}
                     type={'text'}
-                    id={"name"}
-                    {...formik.getFieldProps("name")}   
+                    name="name"
                 />
-                { formik.errors.name?<div className='text-danger'>{formik.errors.name}</div> :null}
+               <ErrorMessage name="name" className='text-danger fs-5 fw-light' component='div'/>
                 </div>
                 <div className='my-2'>
-                <Input className={' form-control  p-3 '}
+                <Field className={' form-control  p-3 '}
                     placeholder={'Password'}
                     type={"password"}
-                    id={"password"}
-                    {...formik.getFieldProps("password")}
+                   name="password"
                 />
-                {formik.errors.password?<div className='text-danger'>{formik.errors.password}</div> :null}
+             <ErrorMessage name="password" className='text-danger fs-5 fw-light' component='div'/>
                 </div>
                
              <div className=' my-2'>
@@ -84,11 +79,12 @@ export default  function Login()
              </Link>
                
              </div>
-             </form>
+             </Form>
+             </Formik>
                 </div>
             </div>
             <div>
-        <Bottom/>
+        <Bottom className=""style={{maxWidth:"500px"}}/>
      </div>
         </div>
     )

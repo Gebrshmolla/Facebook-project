@@ -1,0 +1,13 @@
+.home-hover{
+    background-color:#e9ecef;
+}
+.active-active{
+    color:#2791fc;
+    border-bottom: solid 2px #2791fc;
+}
+.active{
+    color:black;
+}
+.rightSide-active{
+    color:#2791fc;
+}

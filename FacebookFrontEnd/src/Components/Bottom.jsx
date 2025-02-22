@@ -5,11 +5,11 @@ import { Languages } from '../src/Languge';
 function Bottom() {
   return (
     <div>
-      <div>
-      <Ul li={Languages()} link={"text-decoration-none"} className={"d-flex list-unstyled mt-3 ls-none"} liStyle={"mx-1  "}/>
+      <div >
+      <Ul li={Languages()} link={"text-decoration-none"} className={"d-flex bg-white list-unstyled mt-3 ls-none"} liStyle={"mx-1  "}/>
             </div>
             <div className='d-flex '>
-             <Ul li={Items()} link={"text-decoration-none"} className={"d-flex list-unstyled  mt-2 flex-wrap "} liStyle={"mx-1  "}/>
+             <Ul li={Items()} link={"text-decoration-none"} className={"d-flex list-unstyled bg-white  mt-2 flex-wrap "} liStyle={"mx-1  "}/>
        </div>
     </div>
   )
