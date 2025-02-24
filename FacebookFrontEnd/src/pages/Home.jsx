@@ -78,6 +78,16 @@ function Home() {
     icon:<FaFileVideo/>,
     discriprion:"Reels"
 }]
+const YourMinDData=[
+    {icon:<FaCamera color='red'/>,
+        discriprion:"Live Video"
+    },{
+        icon:<FaImages color='green'/>,
+        discriprion:"Picture/Video"
+    },{
+        icon:<FaSmile className='text-warning'/>,
+        discriprion:"Feeling/Activity"
+    }]
 const dropDown= chevronDown ?<div className='cursor-pointer'><FaChevronUp/>Seeless</div>:<div className='cursor-pointer'>
 <FaChevronDown/>SeeMore
 </div>;
