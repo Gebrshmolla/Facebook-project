@@ -129,14 +129,14 @@ const handleAccount=()=>{
   setAccount(true)
 }
   return (
-    <div className='d-flex bg-white border-bottom border-2 border-gray shadow-sm justify-content-between align-items-center '>
+    <div className='d-flex bg-white top-0 position-fixed z-index-1000 w-100 border-bottom border-2 border-gray shadow-sm justify-content-between align-items-center '>
     <div className='d-flex justify-content-start  mt-1  w-50 align-items-center '>
     <div className='ms-3 '>  
       <FaFacebook color="blue" size={45} />
     </div>
     <div className='d-flex justify-content-between align-items-center'>
     <div className='bg-light ms-2 me-2 p-2 rounded-circle'><FaSearch className=" " color='black' size={23}/></div>
-    <div><Input placeholder={"Search Facebook"} className={"d-none d-lg-block form-control bg-light bounded fw-light"}/></div>
+    <div ><Input placeholder={"Search Facebook"} className={"d-none d-lg-block form-control bg-light bounded  fw-light"}/></div>
     </div> 
     </div>
       <div className=' d-flex w-100   justify-content-between align-items-center  d-none d-md-block'>

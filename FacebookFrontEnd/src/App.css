@@ -1,5 +1,6 @@
 .home-hover{
     background-color:#e9ecef;
+    /* background-color: black; */
 }
 .active-active{
     color:#2791fc;
@@ -10,4 +11,13 @@
 }
 .rightSide-active{
     color:#2791fc;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.style{
+    max-height:700px;
+}
+.hidenStyle{
+    max-height: 450px;
 }
